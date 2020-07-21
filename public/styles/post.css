@@ -8,3 +8,16 @@
     font-size: 16pt;
     color: #ebebf599;
 }
+
+/* Markdown */
+
+.post-content blockquote {
+    color: #ebebf599;
+    border-left: 2px solid #ebebf544;
+    margin-left: 12px;
+    padding-left: 14px;
+}
+
+.post-content blockquote * {
+    padding: 8px 0;
+}
