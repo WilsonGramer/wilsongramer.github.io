@@ -5,8 +5,12 @@ const path = require('path')
 const markdown = require('markdown-it')
 const frontMatter = require('yaml-front-matter')
 
-const md = markdown()
-    .use(require('markdown-it-highlightjs'))
+const md = markdown({
+    typographer: true,
+    html: true,
+    linkify: true,
+})
+.use(require('markdown-it-highlightjs'))
 
 const loadPosts = async () => {
     const postsPath = './posts'
