@@ -1,0 +1,17 @@
+.post-title {
+    margin-bottom: 0;
+}
+
+.post-title a {
+    text-decoration: none;
+}
+
+.post-date {
+    margin: 0;
+    color: #ebebf568;
+}
+
+.post-blurb {
+    margin: 0;
+    color: #ebebf599;
+}
