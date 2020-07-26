@@ -1,3 +1,5 @@
+@import './tomorrow_night.css';
+
 /* Layout */
 
 body {
@@ -87,7 +89,10 @@ pre, code {
     font-size: 12pt;
 }
 
-pre > code, pre > code.hljs {
+pre > code {
+    display: block;
+    overflow-x: auto;
+    color: #abb2bf;
     background-color: #2c2c2e;
     padding: 20px 16px;
     border-radius: 10px;
@@ -97,4 +102,14 @@ pre > code, pre > code.hljs {
     background-color: #2c2c2e;
     padding: 2px 6px;
     border-radius: 6px;
+}
+
+.highlight {
+    background: unset;
+    color: #abb2bf;
+}
+
+.highlight > pre {
+    margin: 0;
+    margin-bottom: -1rem;
 }

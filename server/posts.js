@@ -4,13 +4,26 @@ const fs = require('fs-extra')
 const path = require('path')
 const markdown = require('markdown-it')
 const frontMatter = require('yaml-front-matter')
+const hljs = require('highlight.js')
+const highlightWipple = require('../wipple-highlighting')
 
 const md = markdown({
     typographer: true,
     html: true,
     linkify: true,
+    highlight: (code, lang) => {
+        if (!lang)
+            return ''
+
+        if (['wipple', 'wpl'].includes(lang))
+            return highlightWipple(code)
+
+        if (hljs.getLanguage(lang))
+            return `<pre><code class="hljs">${hljs.highlight(lang, code).value}</code></pre>`
+
+        return ''
+    }
 })
-.use(require('markdown-it-highlightjs'))
 
 const loadPosts = async () => {
     const postsPath = './posts'
@@ -31,7 +44,8 @@ const loadPosts = async () => {
         }
     }
 
-    const sortedPostList = Object.values(posts).sort((a, b) => a.pubDate - b.pubDate)
+    const sortedPostList = Object.values(posts)
+        .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
 
     return { posts, sortedPostList }
 }
