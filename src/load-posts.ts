@@ -29,7 +29,11 @@ const loadPost = ({ name, file }: { name: string; file: string }): BlogPost => {
     };
 };
 
-const markdownParser = new MarkdownIt({}).use(hljs, {
+const markdownParser = new MarkdownIt({
+    typographer: true,
+    html: true,
+    linkify: true,
+}).use(hljs, {
     auto: false,
     inline: true,
 });
