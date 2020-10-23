@@ -1,7 +1,11 @@
 import { htmlFragmentSync as html } from "lit-ntml";
 import { blogPostContentStylesheet } from "../styles";
+import { analyticsHead } from "./analytics";
 
 export const head = (title?: string) => html`
+    <!-- Analytics -->
+    ${analyticsHead()}
+
     <title>${title ? `${title} — Wilson Gramer` : "Wilson Gramer"}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
