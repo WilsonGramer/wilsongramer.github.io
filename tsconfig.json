@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "strict": true,
-        "noEmit": true,
+        "outDir": "lib",
         "esModuleInterop": true
     }
 }

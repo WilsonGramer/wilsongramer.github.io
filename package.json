@@ -1,17 +1,12 @@
 {
     "private": true,
-    "type": "module",
     "scripts": {
-        "build": "NODE_ENV=production ts-node src/index.ts",
+        "build": "rm -rf lib && tsc",
+        "start": "node lib/index.js",
         "dev": "DIR=. ts-node-dev --respawn src/index.ts & cd ./build && live-server",
         "format": "prettier src"
     },
     "dependencies": {
-        "@types/fs-extra": "^9.0.2",
-        "@types/html-minifier-terser": "^5.1.1",
-        "@types/jsdom": "^16.2.4",
-        "@types/markdown-it": "^10.0.2",
-        "@types/node": "^14.14.2",
         "front-matter": "^4.0.2",
         "fs-extra": "^9.0.1",
         "highlight.js": "^10.3.1",
@@ -19,13 +14,18 @@
         "lit-ntml": "^2.17.0",
         "markdown-description": "^1.1.0",
         "markdown-it": "^12.0.1",
-        "markdown-it-highlightjs": "^3.3.0",
-        "ts-node": "^9.0.0",
-        "typescript": "^4.0.3"
+        "markdown-it-highlightjs": "^3.3.0"
     },
     "devDependencies": {
         "live-server": "^1.2.1",
         "prettier": "^2.1.2",
-        "ts-node-dev": "^1.0.0"
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.3",
+        "ts-node-dev": "^1.0.0",
+        "@types/fs-extra": "^9.0.2",
+        "@types/html-minifier-terser": "^5.1.1",
+        "@types/jsdom": "^16.2.4",
+        "@types/markdown-it": "^10.0.2",
+        "@types/node": "^14.14.2"
     }
 }
