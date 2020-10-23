@@ -1,5 +1,6 @@
 import { htmlFragmentSync as html } from "lit-ntml";
 import { header } from "../components";
+import { footer } from "../components/footer";
 import { Page } from "./";
 
 export interface BlogPost {
@@ -26,5 +27,7 @@ export const blogPostPage = (post: BlogPost): Page => ({
                 ${post.content}
             </div>
         </div>
+
+        ${footer()}
     `,
 });

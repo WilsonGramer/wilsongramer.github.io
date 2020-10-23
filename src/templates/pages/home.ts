@@ -1,6 +1,7 @@
 import { htmlFragmentSync as html } from "lit-ntml";
 import { header } from "../components";
 import { blogPostCard } from "../components/blog-post-card";
+import { footer } from "../components/footer";
 import { projectCard } from "../components/project-card";
 import { Page } from "./";
 import { BlogPost } from "./blog-post";
@@ -73,5 +74,7 @@ export const homePage = (posts: BlogPost[]): Page => ({
 
             ${posts.map(blogPostCard)}
         </section>
+
+        ${footer()}
     `,
 });
