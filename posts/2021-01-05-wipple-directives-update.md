@@ -50,7 +50,7 @@ The early design of directives also managed assignment (implementing `:`). To de
 
     foo -- error
 
-To define a variable globally, use 'global:' (you should rarely need to do this):
+To define a variable globally, use `global:` (you should rarely need to do this):
 
     do {
         foo global: 42
