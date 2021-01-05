@@ -1,6 +1,6 @@
 ---
 title: New Directives Design in Wipple
-date: August 9, 2020
+date: January 5, 2021
 ---
 
 Wipple has evolved a lot since my last post! I plan to publish a full writeup of all updates to the language, but for now, I've added a new construct called a directive.
