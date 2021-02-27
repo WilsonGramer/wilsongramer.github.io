@@ -32,11 +32,21 @@ export const homePage = (posts: BlogPost[]): Page => ({
                     Make Directory.
                 </a>
 
-                I’m mainly interested in devops and backend programming, and am
-                most experienced in Swift, TypeScript and Go. Check out what
-                I’ve been building recently in my free time:
+                I’m mainly interested in devops and backend programming, and
+                work primarily with Swift, TypeScript, Rust and Go. Check out
+                what I’ve been building recently:
             </p>
 
+            ${projectCard({
+                title: "Wipple",
+                image: "/images/wipple.svg",
+                description:
+                    "Programming language for building DSLs that’s natural to read, write and learn. I’m building Wipple to learn how programming languages work, and plan to use it on my robotics team.",
+                link: {
+                    name: "Website",
+                    url: "https://wipple.gramer.dev/",
+                },
+            })}
             ${projectCard({
                 title: "SuperHomework",
                 image: "/images/superhomework.png",
@@ -55,16 +65,6 @@ export const homePage = (posts: BlogPost[]): Page => ({
                 link: {
                     name: "Website",
                     url: "https://retailbox.app/",
-                },
-            })}
-            ${projectCard({
-                title: "Wipple",
-                image: "/images/wipple.png",
-                description:
-                    "Powerful, expressive programming language that's designed for DSLs. It’s natural to read, write and learn. Wipple embraces traits, macros, custom operators, and interpreter plugins to let you shape the language into anything you want.",
-                link: {
-                    name: "Website",
-                    url: "https://wipple.gramer.dev/",
                 },
             })}
         </section>
