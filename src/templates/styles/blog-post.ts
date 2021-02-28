@@ -22,6 +22,10 @@ export const blogPostContentStylesheet = `
         margin-bottom: 1em;
     }
 
+    .markdown-content a {
+        color: #63b3ed;
+    }
+
     .markdown-content code {
         font-family: "JetBrains Mono", monospace;
     }
