@@ -1,6 +1,6 @@
 ---
+layout: post
 title: “Generic extensions”?
-date: March 24, 2020
 ---
 
 Currently in Swift the `zip` function is implemented similar to this:

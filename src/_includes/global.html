@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>
+            {{ title + " — Wilson Gramer" if title else "Wilson Gramer" }}
+        </title>
+
+        <link rel="stylesheet" href="/styles/global.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="title">
+                <a href="/">Wilson Gramer</a>
+            </div>
+
+            <div class="links">
+                <a href="https://twitter.com/WilsonGramer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="https://github.com/WilsonGramer">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://dev.to/WilsonGramer">
+                    <i class="fab fa-dev"></i>
+                </a>
+            </div>
+        </div>
+
+        {{ content | safe }}
+
+        <div class="footer">
+            <p><small>© {% year %} Wilson Gramer</small></p>
+
+            <p>
+                <small>
+                    <a href="https://github.com/WilsonGramer/website">
+                        Source code
+                    </a>
+                </small>
+            </p>
+        </div>
+    </body>
+</html>

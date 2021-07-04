@@ -1,6 +1,6 @@
 ---
+layout: post
 title: Binding Optionals in SwiftUI
-date: August 9, 2020
 ---
 
 I’ve been working a lot with SwiftUI lately, and one issue I keep running into is dealing with binding to an `Optional` state value. So I wrote these simple little `Binding` extensions (they should be self-explanatory) — I hope you find them useful!

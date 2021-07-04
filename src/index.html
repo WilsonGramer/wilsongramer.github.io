@@ -1,0 +1,64 @@
+---
+layout: global
+
+projects:
+    - name: Wipple
+      image: /images/wipple.svg
+      description: Programming language for building DSLs that’s natural to read, write and learn. Wipple combines a powerful type system with Lisp’s expressivity and Python’s ease of use.
+      link: https://wipple.gramer.dev
+
+    - name: SuperHomework
+      image: /images/superhomework.png
+      description: Automatically organize your homework — just sign in with your school accounts, and SuperHomework automatically notifies you when assignments are posted and due.
+      link: https://superhomeworkapp.com
+
+    - name: RetailBox
+      image: /images/retailbox.png
+      description: Home to over 170 high-quality screen savers from places around the world. Use RetailBox to showcase your device for content creation, or even just to relax.
+      link: https://retailbox.app
+---
+
+<header class="intro">
+    <img
+        src="https://0.gravatar.com/avatar/1a55ce5c75a3f6759a6ecd47e99f7aac?s=200"
+        alt="Wilson Gramer"
+    />
+
+    <h1>Hi, I’m Wilson Gramer</h1>
+
+    <p>
+        I’m a passionate student developer currently working at
+        <a href="https://mk-dir.com">Make Directory</a>.
+        <br />
+        Check out what I’ve been working on recently:
+    </p>
+</header>
+
+<div class="projects">
+    {% for project in projects %}
+    <div class="project">
+        <div>
+            <div class="title">
+                <img src="{{ project.image }}" alt="{{ project.name }}" />
+
+                <h3>{{ project.name }}</h3>
+            </div>
+
+            <p>{{ project.description }}</p>
+        </div>
+
+        <a href="{{ project.link }}">Website →</a>
+    </div>
+    {% endfor %}
+</div>
+
+<header>
+    <p>
+        Every so often, I also write about what I’m building on my
+        <a href="/blog">blog</a>:
+    </p>
+</header>
+
+{% include "blog.html" %}
+
+<link rel="stylesheet" href="/styles/home.css" />

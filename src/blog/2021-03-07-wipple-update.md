@@ -1,6 +1,6 @@
 ---
+layout: post
 title: Wipple Weekly Update
-date: March 7, 2021
 ---
 
 I worked a lot on Wipple over the past week — here's what's new!
@@ -60,7 +60,7 @@ show "Hello, world!"
 
 Just run `wipple run` in your terminal to run the project:
 
-```sh
+```shell
 $ wipple run
 Hello, world!
 ```

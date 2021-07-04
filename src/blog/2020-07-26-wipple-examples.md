@@ -1,7 +1,7 @@
 ---
+layout: post
 title: Some examples of Wipple code
 blurb: I’ve been working on my programming language Wipple recently and it’s starting to come together. Here are some code examples.
-date: July 26, 2020
 ---
 
 I've been working on my programming language [Wipple](https://github.com/wipplelang/wipple) recently and it's starting to come together. Here are some code examples!

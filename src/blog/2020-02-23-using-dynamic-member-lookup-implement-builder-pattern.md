@@ -1,6 +1,6 @@
 ---
+layout: post
 title: Using dynamic member lookup to implement the builder pattern
-date: February 23, 2020
 ---
 
 SwiftUI's syntax is unmistakable in regards to building views — instead of assigning properties to your view, you just apply a modifier that returns another view:
@@ -158,7 +158,7 @@ Builder(someInstanceOfPerson)
   .build()
 ```
 
-And we get a `Person` value! There's one more issue, though — we have to pass in an *existing* instance of `Person`, just so its values can be modified once again. Ideally we'd use our builder implementation to "initialize" our value from start to finish. In this case, we can define a `Buildable` protocol that requires an empty initializer, so any properties on the type we want to use must have default values:
+And we get a `Person` value! There's one more issue, though — we have to pass in an _existing_ instance of `Person`, just so its values can be modified once again. Ideally we'd use our builder implementation to "initialize" our value from start to finish. In this case, we can define a `Buildable` protocol that requires an empty initializer, so any properties on the type we want to use must have default values:
 
 ```swift
 protocol Buildable {

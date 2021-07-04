@@ -1,11 +1,11 @@
 ---
+layout: post
 title: A simple introduction to Wipple
-date: February 3, 2021
 ---
 
 As we know, computers are designed to process information — number crunching, handling people's names and phone numbers, showing websites, and more. The problem is that computers are really just machines that can't operate without human guidance. Our job as programmers is to tell the computer what to do, and the way we do that is by writing code. Wipple is a "programming language": similar to languages like English, Wipple is a way to convey meaning, but instead you're having a conversation with the computer!
 
-##  Variables
+## Variables
 
 Computers work by taking some input, and using the program they're given to process that input into some output. A program needs a way to refer to the input, and in Wipple we do this by using **names**. Think of names like labels on boxes — they're a way to identify whatever is inside. A mystery box isn't very useful! Names can be one word, like `number` or `color` or `x`, or multiple words separated by a dash, like `favorite-color` or `lorem-ipsum`. When a name refers to a piece of information, it's called a **variable**.
 
@@ -29,11 +29,11 @@ balance ==> 75
 
 Now the computer knows that `balance` refers to 75!
 
-(If you still got an error running the code, make sure that `balance : 75` is placed *before* `show! balance`. If you place it after, it's like trying to read a label before it's attached to a box — you're doing things in the wrong order.)
+(If you still got an error running the code, make sure that `balance : 75` is placed _before_ `show! balance`. If you place it after, it's like trying to read a label before it's attached to a box — you're doing things in the wrong order.)
 
 ## Functions
 
-So we have a way to refer to input. But how do we actually *do* anything with it? In Wipple, we can describe how to transform input into output using what's called a **function**. If you remember from math, the function `f(x) = x + 3` takes some input `x` and multiplies it by 3. Wipple functions are similar — all you have to do is use an arrow (`=>`, pronounced "becomes"):
+So we have a way to refer to input. But how do we actually _do_ anything with it? In Wipple, we can describe how to transform input into output using what's called a **function**. If you remember from math, the function `f(x) = x + 3` takes some input `x` and multiplies it by 3. Wipple functions are similar — all you have to do is use an arrow (`=>`, pronounced "becomes"):
 
 ```wipple
 input => output

@@ -1,0 +1,16 @@
+---
+tags: posts
+layout: global
+---
+
+<div class="post-title">
+    <h1>{{ title }}</h1>
+    <small class="post-date">{{ page.date | postDate }}</small>
+
+    <hr />
+</div>
+
+<p>{{ content | safe }}</p>
+
+<link rel="stylesheet" href="/styles/post.css" />
+<link rel="stylesheet" href="/styles/prism.css" />

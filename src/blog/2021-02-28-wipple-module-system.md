@@ -1,6 +1,6 @@
 ---
-title: Wipple's Module System
-date: February 28, 2021
+layout: post
+title: Wipple’s Module System
 ---
 
 I've been working on Wipple quite a lot recently, and I'm proud to say that it's now [available for download](https://wipple.gramer.dev)! Currently it only supports running single files though, so it's time to come up with a module system.
@@ -9,8 +9,8 @@ I've been working on Wipple quite a lot recently, and I'm proud to say that it's
 
 In Wipple, a module is simply a captured environment (a collection of values that are passed down throughout the program). Any variables, conformances, etc. that are declared within a macro are captured and made available to others in one of two ways:
 
-- Modules conform to `Call`, so accessing variables can be done by calling the module with the variable name, eg. `my-module foo`
-- The `use` function merges the module's environment with the current one, eg. `use my-module`
+-   Modules conform to `Call`, so accessing variables can be done by calling the module with the variable name, eg. `my-module foo`
+-   The `use` function merges the module's environment with the current one, eg. `use my-module`
 
 ## Declaring modules
 
@@ -65,7 +65,7 @@ struct UseFn(Rc<dyn Fn(&T, &T) -> T>);
 
 impl UseFn {
     fn new(...) -> Self { ... }
-  
+
     fn take_parent() -> Self {
         UseFn::new(|parent, _| parent.clone())
     }
@@ -118,15 +118,15 @@ Modules allow you to split up your project into multiple files and make a distin
 
 In Wipple code, you can declare modules in two ways:
 
-- With module blocks, as shown above
-- With the `module` function, which loads another Wipple file as a module
+-   With module blocks, as shown above
+-   With the `module` function, which loads another Wipple file as a module
 
 The `module` function resolves paths as follows:
 
-- If the path is relative, search relative to the current file; otherwise, search relative to the project root
-- If the path points to a file, append the `.wpl` extension and load the file as a module
-- If the path points to a folder, load the `module.wpl` file inside the folder. If this file does not exist, create an implicit module that `use`s all files/folders in the folder in alphabetical order
-  - This should help prevent the boilerplate in languages where you need to explicitly export all files from the folder!
+-   If the path is relative, search relative to the current file; otherwise, search relative to the project root
+-   If the path points to a file, append the `.wpl` extension and load the file as a module
+-   If the path points to a folder, load the `module.wpl` file inside the folder. If this file does not exist, create an implicit module that `use`s all files/folders in the folder in alphabetical order
+    -   This should help prevent the boilerplate in languages where you need to explicitly export all files from the folder!
 
 Modules are cached based on absolute path. In the future, support will be added for force-reloading modules. Currently modules cannot be mutually recursive (causes a stack overflow), but in the future this will be handled more gracefully.
 
@@ -201,7 +201,5 @@ x -- 2
 By convention, names referring to closures that mutate references or modify anything outside their own captured environment should have a `!` at the end.
 
 References are stored as `Rc<RefCell<Value>>` values in Rust. In the future, support for weak references will be added to prevent reference cycles.
-
-
 
 Thanks for reading! If you want to check out Wipple's implementation, you can visit https://github.com/wipplelang and browse the repositories. To download Wipple, visit https://wipple.gramer.dev.
