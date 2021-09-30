@@ -49,7 +49,7 @@ h3 {
 }
 
 a {
-    color: inherit;
+    color: var(--fg-tertiary);
     text-decoration: underline solid var(--bg-quaternary);
     text-decoration-thickness: 1.25pt;
     text-underline-position: from-font;
