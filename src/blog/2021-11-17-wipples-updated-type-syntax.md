@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Wipple's Updated Type Syntax
+title: Wipple's updated type syntax
 ---
 
 In my spree to streamline different parts of Wipple, I've decided to update the type syntax to be more flexible and consistent. Here's how it works!
