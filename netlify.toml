@@ -1,6 +1,0 @@
-[build]
-publish = "_site/"
-command = "npm run build"
-
-[content.production.environment]
-TZ = "America/New_York"
