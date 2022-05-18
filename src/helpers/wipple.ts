@@ -5,13 +5,11 @@ import refractor from "refractor/core";
 const wipple = (Prism) => {
     Prism.languages.wipple = {
         keyword: {
-            pattern:
-                /\b(?:_|and|assert|data|end|enum|for|get|if|loop|mutable|not|or|set!|template|test|trait|type|unless!|until|use|when|when|when!|when\?|where|while)\b/,
+            pattern: /\b_|use|when|type|trait|instance|where|external\b/,
             greedy: true,
         },
-        builtin: {
-            pattern:
-                /\b(?:Block|Compare|Default|Equal|False|List|Name|None|Number|Quote|Some|Text|True|doc|format|increment!|show|Show)\b/,
+        "class-name": {
+            pattern: /\b[A-Z][^\r\n\t \(\)\[\]\{\}'"/]*\b/,
             greedy: true,
         },
         comment: {
