@@ -1,0 +1,13 @@
+---
+tags: posts
+layout: page
+---
+
+<article class="p-4">
+    <div class="mb-8 text-center">
+        <h1 class="text-3xl font-medium">{{ title }}</h1>
+        <p class="text-xl font-medium">{{ page.date | postDate }}</p>
+    </div>
+
+    <div class="post">{{ content | safe }}</div>
+</article>
