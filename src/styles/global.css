@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 html {
-    @apply dark:bg-black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
 }
 
 body {
+    @apply dark:bg-black;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
 }
 
 main {
-    @apply max-w-3xl mx-auto px-4;
+    @apply max-w-4xl mx-auto px-4;
 }
 
 a {
@@ -36,7 +36,7 @@ a {
 }
 
 .post {
-    @apply prose dark:prose-invert prose-lg prose-a:underline prose-a:underline-offset-1 prose-a:decoration-2 prose-a:decoration-sky-500;
+    @apply prose max-w-4xl dark:prose-invert prose-lg prose-a:underline prose-a:underline-offset-1 prose-a:decoration-2 prose-a:decoration-sky-500;
 }
 
 .post pre {

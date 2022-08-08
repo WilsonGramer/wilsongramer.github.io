@@ -1,7 +1,7 @@
 const { format } = require("date-fns");
 
 module.exports = (eleventy) => {
-    eleventy.setTemplateFormats(["html", "md", "jpg", "png", "svg"]);
+    eleventy.setTemplateFormats(["html", "md", "jpg", "png", "svg", "webp"]);
 
     eleventy.addGlobalData(
         "profile",
