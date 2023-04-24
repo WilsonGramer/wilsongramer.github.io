@@ -1,84 +1,54 @@
 ---
 layout: page
-projects:
-    - image: /images/wipple.svg
-      title: Wipple
-      description: A programming language designed to be natural to read, write and learn.
-      linkTitle: Learn Wipple
-      link: https://wipple.gramer.dev
-    - image: /images/superhomework.png
-      title: SuperHomework
-      description: Automatically organize your homework across all of your classes.
-      linkTitle: View on App Store
-      link: https://superhomeworkapp.com
 ---
 
-<section class="p-4">
-    <div class="w-full mx-auto text-center">
-        <img
-            src="{{ profile }}"
-            alt="Wilson Gramer"
-            class="w-20 rounded-full mx-auto"
-        />
+<img
+    src="https://0.gravatar.com/avatar/1a55ce5c75a3f6759a6ecd47e99f7aac?s=200"
+    alt="Wilson Gramer"
+    class="w-16 sm:w-20 rounded-full"
+/>
 
-        <h1 class="text-3xl font-medium my-4 text-primary">
-            Hi, I’m Wilson Gramer
-        </h1>
+<h1 class="text-3xl sm:text-4xl">Hi, I’m Wilson Gramer</h1>
 
-        <p class="text-xl text-secondary">
-            I’m a passionate student and developer studying computer science at
-            <a href="https://wpi.edu">WPI</a>. I also work on mobile app
-            development at <a href="https://mk-dir.com">Make Directory</a>.
-            Check out what I’ve been building recently:
-        </p>
-    </div>
+<p class="text-xl">
+    I’m a computer science student at
+    <a href="https://wpi.edu">Worcester Polytechnic Institute</a>. I work at
+    <a href="https://mk-dir.com">Make Directory</a> on <a href="https://koroid.com">Koroid</a>, a
+    healthcare resource management system. I’m also building
+    <a href="https://wipple.dev">Wipple</a>, a programming language for teaching students how to
+    code.
+</p>
 
-    <div class="grid md:grid-cols-2 gap-4 mt-8">
-        {% for project in projects %}
-        <div class="flex flex-col gap-3.5 bg-secondary p-3.5 rounded-xl">
-            <img
-                src="{{ project.image }}"
-                alt="{{ project.title }}"
-                class="w-10 h-10"
-            />
+<p class="text-xl">
+    Connect with me on
+    <a href="https://www.linkedin.com/in/wilson-gramer-a25260255/">LinkedIn</a> and
+    <a href="https://github.com/WilsonGramer">GitHub</a>.
+</p>
 
-            <div class="flex-grow">
-                <p class="font-semibold mb-1 text-primary">
-                    {{ project.title }}
-                </p>
-                <p class="text-secondary">{{ project.description }}</p>
-            </div>
+<h2 class="text-2xl sm:text-3xl mt-12">My work</h2>
 
-            <a class="text-primary" href="{{ project.link }}">
-                {{ project.linkTitle }} ↗
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
+<h3 class="text-xl sm:text-2xl">Koroid</h3>
+<p class="text-lg">
+    I have three years of experience at Make Directory, where I work on Koroid, a resource
+    management system for healthcare. Koroid streamlines tracking and fulfilling hospital staffing
+    needs using AI. My areas of work include mobile app development, cloud infrastructure, and
+    machine learning. <a href="https://koroid.com">koroid.com</a>
+</p>
 
-<section id="blog" class="mt-8 p-4">
-    <div class="p-4 w-full mx-auto text-center">
-        <p class="text-xl text-secondary">
-            I also write about programming on my blog:
-        </p>
-    </div>
+<h3 class="text-xl sm:text-2xl">Wipple</h3>
+<p class="text-lg">
+    Wipple is a programming language that’s natural to read, write and learn. Designed for students
+    who are ready for the next step after block coding, Wipple offers an easy-to-use, interactive
+    environment for building and sharing programs. Use Wipple to make drawings, play music, explore
+    math, and much more. <a href="https://wipple.dev">wipple.dev</a>
+</p>
 
-    <div class="grid md:grid-cols-3 gap-4 mt-8">
-        {% for post in collections.posts | reverse %}
-        <div class="flex flex-col h-full gap-3.5 bg-secondary p-3.5 rounded-xl">
-            <p class="font-semibold text-primary">
-                {{ post.data.title }}
-                <br />
-                <span class="font-semibold text-xs text-secondary">
-                    {{ post.date | postDate }}
-                </span>
-            </p>
+<h3 class="text-xl sm:text-2xl">SuperHomework</h3>
+<p class="text-lg">
+    SuperHomework is an app that automatically organizes your homework. Schedule reminder
+    notifications and see due dates at a glance. Sign in with Google Classroom to sync everything in
+    one place. You’ll never need an agenda book again.
+    <a href="https://superhomeworkapp.com">superhomeworkapp.com</a>
+</p>
 
-            <p class="flex-grow text-secondary">{{ post.data.description }}</p>
-
-            <a class="text-primary" href="{{ post.data.page.url }}">Read ↗</a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
+<p class="text-sm mt-14">© 2023 Wilson Gramer</p>

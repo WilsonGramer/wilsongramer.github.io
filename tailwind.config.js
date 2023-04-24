@@ -1,29 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{html,md}"],
-    plugins: [require("@tailwindcss/typography")],
-    darkMode: "media",
+    content: ["./src/*.{html,md}", "./src/**/*.{html,md}"],
     theme: {
-        extend: {
-            typography: {
-                DEFAULT: {
-                    css: {
-                        pre: false,
-                        code: false,
-                        "pre code": false,
-                        "code::before": false,
-                        "code::after": false,
-                        "blockquote p:first-of-type::before": false,
-                        "blockquote p:last-of-type::after": false,
-                    },
-                },
-            },
-        },
+        extend: {},
     },
-    variants: {
-        typography: ["responsive", "dark"],
-        extend: {
-            typography: ["dark"],
-        },
+    plugins: [require("@tailwindcss/typography")],
+    corePlugins: {
+        preflight: false,
     },
 };
