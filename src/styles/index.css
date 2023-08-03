@@ -9,10 +9,11 @@ body {
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @apply dark:bg-gray-900;
 }
 
 a {
-    @apply font-semibold text-sky-500 no-underline;
+    @apply font-semibold text-sky-500 dark:text-sky-400 no-underline;
 }
 
 h1,
